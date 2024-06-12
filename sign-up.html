@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="icon" type="image/x-icon" href="./img/log-in/Capa 2.png">
+    <script src="./js/sign_up.js"></script>
+    <script src="./js/storage.js"></script>
+</head>
+
+<body onload="initRegister()">
+    <div id="Sign-up-page">
+
+        <div class="Join-img">
+        </div>
+
+
+        <div class="Log-in-position">
+            <form class="form" onsubmit="register(); return false;">
+                <div class="log-in-field">
+                    <div class="center">
+                        <div class="arrow-position">
+                            <img onclick="history.back()" src="./img/log-in/arrow-left-line.png">
+                        </div>
+                        <div id="log-in-headline-underline" style="margin-right: 70px;">
+                            <h1 class="log-in-headline">Sign up</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <input required id="newUser" class="input-field" type="text" placeholder="Name">
+                        <img class="pngs" src="./img/log-in/person.png">
+                    </div>
+                    <div>
+                        <input required id="email" class="input-field" type="email" placeholder="Email">
+                        <img class="pngs" src="./img/log-in/mail.png">
+                    </div>
+                    <div>
+                        <input onclick="showPassword('password')" onblur="resetPasswordVisibility('password')" required
+                            id="password" class="input-field" type="password" placeholder="Password">
+                        <img onclick="togglePasswordVisibility('password')" id="lock-password" class="pngs"
+                            src="./img/log-in/lock.png" style="cursor: pointer;">
+                    </div>
+                    <div>
+                        <input onclick="showPassword('password2')" onblur="resetPasswordVisibility('password2')"
+                            required id="password2" class="input-field" type="password" placeholder="Confirm password">
+                        <img onclick="togglePasswordVisibility('password2')" id="lock-password2" class="pngs"
+                            src="./img/log-in/lock.png" style="cursor: pointer;">
+                        <p class="hiden" id="warning">Ups! your password don't match</p>
+                    </div>
+                    <div class="checkbox">
+
+                        <input type="checkbox" name="remember" id="remember" required>
+                        <label for="remember" class="center">I accept the <a class="bold1" href="privacypolicy.html"
+                                style="color: rgb(41, 171, 226); margin-left: 4px;">Privacy policy</a></label>
+                    </div>
+                    <div class="buttons">
+                        <button id="registerBtn" class="btn">Sign up</button>
+                    </div>
+                    <div id="animation" class="hiden">You Signed Up successfully</div>
+            </form>
+        </div>
+
+        <div class="legal">
+            <a href="privacypolicy.html" class="bold">Privacy Policy</a>
+            <a href="legalnotice.html" class="bold">Legal notice</a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
