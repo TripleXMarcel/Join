@@ -4,6 +4,8 @@
 .board-content-container {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .board-navigation {
@@ -101,8 +103,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    width: 84vw;
-    margin-left: 27px;
+    width: 100%;
 }
 
 .add-image {
@@ -140,6 +141,7 @@
 
 .board-task-group {
     min-width: 20%;
+    margin: 0;
 }
 
 .empty-board-task {
@@ -394,10 +396,8 @@
 .Drop-box {
     /* border: 1px solid black; */
     border-radius: 10px;
-    height: calc(87vh - 300px);
-    width: 100%;
-    padding: 0px 21px 0px 21px;
-    overflow: auto;
+    height: 100%;
+    padding: 5px 21px 0px 21px;
     scrollbar-width: none;
     margin-bottom: 20px;
 }
@@ -609,11 +609,8 @@ ul {
         align-items: center;
         justify-content: space-between;
         margin: 10px;
+        gap: 20px;
         font-size: xx-large;
-    }
-
-    .board-task-group {
-        width: 80vw;
     }
 
     .card {
@@ -633,16 +630,13 @@ ul {
     }
 
     .board-task-container {
+        padding-top: 25px;
         display: flex;
         height: 100vh;
         overflow: auto;
         flex-direction: column;
         justify-content: flex-start;
-        width: 100vw;
         margin: 0px;
-
-
-
     }
 
 
@@ -662,10 +656,18 @@ ul {
         white-space: nowrap;
     }
 
+    .board-task-group{
+        margin: 0;
+    }
+
     .board-content-container {
         display: flex;
         flex-direction: column;
         max-height: calc(100vh - 160px);
+    }
+
+    .board-task-header{
+        padding-right: 25px;
     }
 
     .bigcard {
@@ -1052,20 +1054,7 @@ ul {
 
 }
 
-@media (max-width: 1630px) and (min-width:900px) {
-    .board-task-container {
-        width: 74vw;
-        margin-left: 37px;
-    }
-}
-
 @media (max-width: 1300px) and (min-width:900px) {
-    .board-task-container {
-        width: 73vw;
-        display: flex;
-        margin: 0;
-        justify-content: space-between;
-    }
 
     .board-content-container {
         align-items: center;
